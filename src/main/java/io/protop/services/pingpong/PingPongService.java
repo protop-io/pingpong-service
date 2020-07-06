@@ -12,7 +12,7 @@ public class PingPongService extends PingPongServiceGrpc.PingPongServiceImplBase
     public StreamObserver<Api.Ping> exchange(StreamObserver<Api.Pong> responseObserver) {
         System.out.println("Connection opened.");
         AtomicInteger count = new AtomicInteger();
-        
+
         return new StreamObserver<Api.Ping>() {
             @Override
             public void onNext(Api.Ping value) {
