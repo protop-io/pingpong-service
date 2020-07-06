@@ -13,7 +13,7 @@ public class App {
     private App(int port) {
         this.port = port;
         this.server = ServerBuilder.forPort(port)
-                .addService(new PingPongService())
+                // TODO add services
                 .build();
     }
 
